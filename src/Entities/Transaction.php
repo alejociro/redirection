@@ -11,25 +11,65 @@ class Transaction extends Entity
 
     /**
      * Reference as the commerce provides.
+     * @var string
      */
-    protected string $reference;
+    protected $reference;
+
     /**
      * Reference for PlacetoPay.
+     * @var string
      */
-    protected string $internalReference = '';
-    protected string $paymentMethod = '';
-    protected string $paymentMethodName = '';
-    protected string $issuerName = '';
-    protected ?Discount $discount = null;
-    protected AmountConversion $amount;
-    protected string $authorization = '';
-    protected string $receipt = '';
-    protected string $franchise = '';
-    protected bool $refunded = false;
+    protected $internalReference = '';
+
+    /**
+     * @var string
+     */
+    protected $paymentMethod = '';
+
+    /**
+     * @var string
+     */
+    protected $paymentMethodName = '';
+
+    /**
+     * @var string
+     */
+    protected $issuerName = '';
+
+    /**
+     * @var Discount|null
+     */
+    protected $discount = null;
+
+    /**
+     * @var AmountConversion
+     */
+    protected $amount;
+
+    /**
+     * @var string
+     */
+    protected $authorization = '';
+
+    /**
+     * @var string
+     */
+    protected $receipt = '';
+
+    /**
+     * @var string
+     */
+    protected $franchise = '';
+
+    /**
+     * @var bool
+     */
+
+    protected $refunded = false;
     /**
      * @var NameValuePair[]
      */
-    protected array $processorFields = [];
+    protected $processorFields = [];
 
     public function __construct($data = [])
     {

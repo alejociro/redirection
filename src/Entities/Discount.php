@@ -6,11 +6,30 @@ use Dnetix\Redirection\Contracts\Entity;
 
 class Discount extends Entity
 {
-    protected string $code;
-    protected string $type;
-    protected float $amount;
-    protected float $base;
-    protected float $percent;
+    /**
+     * @var string
+     */
+    protected $code;
+
+    /**
+     * @var string
+     */
+    protected $type;
+
+    /**
+     * @var float
+     */
+    protected $amount;
+
+    /**
+     * @var float
+     */
+    protected $base;
+
+    /**
+     * @var float
+     */
+    protected $percent;
 
     public function __construct($data = [])
     {

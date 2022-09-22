@@ -6,12 +6,15 @@ class Amount extends AmountBase
 {
     /**
      * @var TaxDetail[]
+     * @var array
      */
-    protected array $taxes = [];
+    protected $taxes = [];
+
     /**
      * @var AmountDetail[]
+     * @var array
      */
-    protected array $details = [];
+    protected $details = [];
 
     public function __construct($data = [])
     {

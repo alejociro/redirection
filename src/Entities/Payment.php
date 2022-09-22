@@ -9,21 +9,65 @@ class Payment extends Entity
 {
     use FieldsTrait;
 
-    protected string $reference;
-    protected string $description = '';
-    protected ?Amount $amount = null;
-    protected bool $allowPartial = false;
-    protected ?Person $shipping = null;
     /**
-     * @var Item[]
+     * @var string
      */
-    protected array $items = [];
-    protected ?Recurring $recurring = null;
-    protected ?Discount $discount = null;
-    protected ?Instrument $instrument = null;
-    public bool $subscribe = false;
-    protected ?int $agreement = null;
-    protected string $agreementType = '';
+    protected $reference;
+
+    /**
+     * @var string
+     */
+    protected $description = '';
+
+    /**
+     * @var Amount|null
+     */
+    protected $amount = null;
+
+    /**
+     * @var bool
+     */
+    protected $allowPartial = false;
+
+    /**
+     * @var Person|null
+     */
+    protected $shipping = null;
+
+    /**
+     * @var Item[]|array
+     */
+    protected $items = [];
+
+    /**
+     * @var Recurring|null
+     */
+    protected $recurring = null;
+
+    /**
+     * @var Discount|null
+     */
+    protected $discount = null;
+
+    /**
+     * @var Instrument|null
+     */
+    protected $instrument = null;
+
+    /**
+     * @var bool
+     */
+    public $subscribe = false;
+
+    /**
+     * @var int|null
+     */
+    protected $agreement = null;
+
+    /**
+     * @var string
+     */
+    protected $agreementType = '';
 
     public function __construct(array $data = [])
     {

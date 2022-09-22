@@ -6,11 +6,30 @@ use Dnetix\Redirection\Contracts\Entity;
 
 class Instrument extends Entity
 {
-    protected ?Account $bank = null;
-    protected ?Token $token = null;
-    protected ?Credit $credit = null;
-    protected string $pin;
-    protected string $password;
+    /**
+     * @var Account|null
+     */
+    protected $bank = null;
+
+    /**
+     * @var Token|null
+     */
+    protected $token = null;
+
+    /**
+     * @var Credit|null
+     */
+    protected $credit = null;
+
+    /**
+     * @var string|mixed
+     */
+    protected $pin;
+
+    /**
+     * @var string|mixed
+     */
+    protected $password;
 
     public function __construct($data = [])
     {

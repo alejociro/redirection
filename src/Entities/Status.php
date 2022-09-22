@@ -17,12 +17,30 @@ class Status extends Entity
     public const ST_ERROR = 'ERROR';
     public const ST_UNKNOWN = 'UNKNOWN';
 
-    protected string $status;
-    protected string $reason;
-    protected string $message = '';
-    protected string $date = '';
+    /**
+     * @var string
+     */
+    protected $status;
 
-    protected static array $STATUSES = [
+    /**
+     * @var string
+     */
+    protected $reason;
+
+    /**
+     * @var string
+     */
+    protected $message = '';
+
+    /**
+     * @var string
+     */
+    protected $date = '';
+
+    /**
+     * @var array|string[]
+     */
+    protected static $STATUSES = [
         self::ST_OK,
         self::ST_FAILED,
         self::ST_APPROVED,

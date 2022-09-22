@@ -9,7 +9,7 @@ trait StatusTrait
     /**
      * @var Status
      */
-    protected Status $status;
+    protected $status;
 
     public function status(): Status
     {

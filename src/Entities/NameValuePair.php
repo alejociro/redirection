@@ -6,9 +6,17 @@ use Dnetix\Redirection\Contracts\Entity;
 
 class NameValuePair extends Entity
 {
-    protected string $keyword;
+    /**
+     * @var string
+     */
+    protected $keyword;
+
     protected $value;
-    protected string $displayOn = 'none';
+
+    /**
+     * @var string
+     */
+    protected $displayOn = 'none';
 
     public function __construct($data = [])
     {

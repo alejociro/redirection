@@ -6,11 +6,25 @@ use Dnetix\Redirection\Entities\Instrument;
 
 class CollectRequest extends RedirectRequest
 {
-    protected Instrument $instrument;
+    /**
+     * @var Instrument
+     */
+    protected $instrument;
 
-    protected string $returnUrl = '';
-    protected string $ipAddress = '';
-    protected string $userAgent = '';
+    /**
+     * @var string
+     */
+    protected $returnUrl = '';
+
+    /**
+     * @var string
+     */
+    protected $ipAddress = '';
+
+    /**
+     * @var string
+     */
+    protected $userAgent = '';
 
     public function __construct(array $data = [])
     {

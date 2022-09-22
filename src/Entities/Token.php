@@ -6,16 +6,50 @@ use Dnetix\Redirection\Contracts\Entity;
 
 class Token extends Entity
 {
-    protected string $token = '';
-    protected string $subtoken = '';
-    protected string $franchise = '';
-    protected string $franchiseName = '';
-    protected string $issuerName = '';
-    protected string $lastDigits = '';
-    protected string $validUntil = '';
+    /**
+     * @var string
+     */
+    protected $token = '';
+
+    /**
+     * @var string
+     */
+    protected $subtoken = '';
+
+    /**
+     * @var string
+     */
+    protected $franchise = '';
+
+    /**
+     * @var string
+     */
+    protected $franchiseName = '';
+
+    /**
+     * @var string
+     */
+    protected $issuerName = '';
+
+    /**
+     * @var string
+     */
+    protected $lastDigits = '';
+
+    /**
+     * @var string
+     */
+    protected $validUntil = '';
     // Just in case the token will be utilized
-    protected string $cvv = '';
-    protected int $installments = 0;
+    /**
+     * @var string
+     */
+    protected $cvv = '';
+
+    /**
+     * @var int
+     */
+    protected $installments = 0;
 
     public function __construct($data = [])
     {

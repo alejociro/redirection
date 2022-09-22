@@ -10,11 +10,25 @@ class Notification extends Entity
 {
     use StatusTrait;
 
-    protected string $requestId;
-    protected string $reference;
-    protected string $signature;
+    /**
+     * @var string
+     */
+    protected $requestId;
 
-    private string $tranKey;
+    /**
+     * @var string
+     */
+    protected $reference;
+
+    /**
+     * @var string
+     */
+    protected $signature;
+
+    /**
+     * @var string
+     */
+    private $tranKey;
 
     public function __construct(array $data, string $tranKey)
     {

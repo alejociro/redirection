@@ -5,9 +5,9 @@ namespace Dnetix\Redirection\Entities;
 class DispersionPayment extends Payment
 {
     /**
-     * @var Payment[]
+     * @var Payment[]|array
      */
-    protected array $dispersion = [];
+    protected $dispersion = [];
 
     public function __construct(array $data = [])
     {

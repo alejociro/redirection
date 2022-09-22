@@ -6,8 +6,15 @@ use Dnetix\Redirection\Contracts\Entity;
 
 class AmountBase extends Entity
 {
-    protected string $currency = 'COP';
-    protected float $total;
+    /**
+     * @var string
+     */
+    protected $currency = 'COP';
+
+    /**
+     * @var float
+     */
+    protected $total;
 
     public function __construct($data = [])
     {

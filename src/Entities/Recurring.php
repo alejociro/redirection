@@ -11,17 +11,35 @@ class Recurring extends Entity
      * Y = annual  M = monthly  D = daily.
      * @var string
      */
-    protected string $periodicity;
-    protected int $interval;
-    protected string $nextPayment = '';
+    protected $periodicity;
+
+    /**
+     * @var int
+     */
+    protected $interval;
+
+    /**
+     * @var string
+     */
+    protected $nextPayment = '';
+
     /**
      * Depends on the number of times that it makes the charge, corresponds to maximum times that the recurrence
      * will happen. If you do not want to set up should indicated -1.
      * You must specify this parameter or dueDate.
+     * @var int|null
      */
-    protected ?int $maxPeriods = null;
-    protected string $dueDate = '';
-    protected string $notificationUrl = '';
+    protected $maxPeriods = null;
+
+    /**
+     * @var string
+     */
+    protected $dueDate = '';
+
+    /**
+     * @var string
+     */
+    protected $notificationUrl = '';
 
     public function __construct($data = [])
     {

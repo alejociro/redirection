@@ -9,10 +9,25 @@ class Account extends Entity
 {
     use StatusTrait;
 
-    protected string $bankCode;
-    protected string $bankName;
-    protected string $accountType = '';
-    protected string $accountNumber = '';
+    /**
+     * @var string
+     */
+    protected $bankCode;
+
+    /**
+     * @var string
+     */
+    protected $bankName;
+
+    /**
+     * @var string
+     */
+    protected $accountType = '';
+
+    /**
+     * @var string
+     */
+    protected $accountNumber = '';
 
     public function __construct($data = [])
     {

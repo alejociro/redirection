@@ -6,12 +6,35 @@ use Dnetix\Redirection\Contracts\Entity;
 
 class Item extends Entity
 {
-    protected string $sku = '';
-    protected string $name = '';
-    protected string $category = '';
-    protected string $qty = '';
-    protected string $price = '';
-    protected string $tax = '';
+    /**
+     * @var string
+     */
+    protected $sku = '';
+
+    /**
+     * @var string
+     */
+    protected $name = '';
+
+    /**
+     * @var string
+     */
+    protected $category = '';
+
+    /**
+     * @var string
+     */
+    protected $qty = '';
+
+    /**
+     * @var string
+     */
+    protected $price = '';
+
+    /**
+     * @var string
+     */
+    protected $tax = '';
 
     public function __construct($data = [])
     {

@@ -11,7 +11,10 @@ class ReverseResponse extends Entity
 {
     use StatusTrait;
 
-    protected ?Transaction $payment = null;
+    /**
+     * @var Transaction|null
+     */
+    protected $payment = null;
 
     public function payment(): ?Transaction
     {

@@ -9,8 +9,15 @@ class Subscription extends Entity
 {
     use FieldsTrait;
 
-    protected string $reference = '';
-    protected string $description = '';
+    /**
+     * @var string
+     */
+    protected $reference = '';
+
+    /**
+     * @var string
+     */
+    protected $description = '';
 
     public function __construct(array $data = [])
     {
