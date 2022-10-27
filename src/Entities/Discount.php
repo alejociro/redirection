@@ -56,7 +56,7 @@ class Discount extends Entity
         return $this->base;
     }
 
-    public function percent(): float
+    public function percent(): ?float
     {
         return $this->percent;
     }
