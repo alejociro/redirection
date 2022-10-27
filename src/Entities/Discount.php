@@ -27,7 +27,7 @@ class Discount extends Entity
     protected $base;
 
     /**
-     * @var float
+     * @var float|mixed
      */
     protected $percent;
 
