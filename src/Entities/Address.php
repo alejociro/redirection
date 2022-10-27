@@ -6,12 +6,35 @@ use Dnetix\Redirection\Contracts\Entity;
 
 class Address extends Entity
 {
-    protected string $street = '';
-    protected string $city = '';
-    protected string $state = '';
-    protected string $postalCode = '';
-    protected string $country = '';
-    protected string $phone = '';
+    /**
+     * @var string
+     */
+    protected $street = '';
+
+    /**
+     * @var string
+     */
+    protected $city = '';
+
+    /**
+     * @var string
+     */
+    protected $state = '';
+
+    /**
+     * @var string
+     */
+    protected $postalCode = '';
+
+    /**
+     * @var string
+     */
+    protected $country = '';
+
+    /**
+     * @var string
+     */
+    protected $phone = '';
 
     public function __construct($data = [])
     {

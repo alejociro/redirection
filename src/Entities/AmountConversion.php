@@ -6,9 +6,20 @@ use Dnetix\Redirection\Contracts\Entity;
 
 class AmountConversion extends Entity
 {
-    protected ?AmountBase $from = null;
-    protected ?AmountBase $to = null;
-    protected float $factor = 1;
+    /**
+     * @var AmountBase|null
+     */
+    protected $from = null;
+
+    /**
+     * @var AmountBase|null
+     */
+    protected $to = null;
+
+    /**
+     * @var float|int
+     */
+    protected $factor = 1;
 
     public function __construct($data = [])
     {

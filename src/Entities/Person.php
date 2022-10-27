@@ -7,14 +7,45 @@ use Dnetix\Redirection\Helpers\DocumentHelper;
 
 class Person extends Entity
 {
-    protected string $document = '';
-    protected string $documentType = '';
-    protected string $name = '';
-    protected string $surname = '';
-    protected string $company = '';
-    protected string $email = '';
-    protected string $mobile = '';
-    protected ?Address $address = null;
+    /**
+     * @var string
+     */
+    protected $document = '';
+
+    /**
+     * @var string
+     */
+    protected $documentType = '';
+
+    /**
+     * @var string
+     */
+    protected $name = '';
+
+    /**
+     * @var string
+     */
+    protected $surname = '';
+
+    /**
+     * @var string
+     */
+    protected $company = '';
+
+    /**
+     * @var string
+     */
+    protected $email = '';
+
+    /**
+     * @var string
+     */
+    protected $mobile = '';
+
+    /**
+     * @var Address|null
+     */
+    protected $address = null;
 
     public function __construct($data = [])
     {

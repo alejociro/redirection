@@ -12,13 +12,24 @@ class RedirectInformation extends Entity
 {
     use StatusTrait;
 
-    protected string $requestId;
-    protected ?RedirectRequest $request = null;
     /**
-     * @var Transaction[]
+     * @var mixed|string
      */
-    protected array $payment = [];
-    protected ?SubscriptionInformation $subscription = null;
+    protected $requestId;
+
+    /**
+     * @var RedirectRequest|null
+     */
+    protected $request = null;
+    /**
+     * @var Transaction[]|array
+     */
+    protected $payment = [];
+
+    /**
+     * @var SubscriptionInformation|null
+     */
+    protected $subscription = null;
 
     public function __construct(array $data = [])
     {

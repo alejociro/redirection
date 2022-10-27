@@ -16,7 +16,10 @@ use Psr\Log\LoggerInterface;
  */
 class Logger
 {
-    protected ?LoggerInterface $logger = null;
+    /**
+     * @var LoggerInterface|null
+     */
+    protected $logger = null;
 
     public function __construct(LoggerInterface $logger = null)
     {

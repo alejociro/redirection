@@ -15,21 +15,60 @@ class Settings extends Entity
     public const TP_REST = 'rest';
     public const TP_SOAP = 'soap';
 
-    protected string $type = self::TP_REST;
-    protected string $baseUrl = '';
+    /**
+     * @var string|mixed
+     */
+    protected $type = self::TP_REST;
 
-    protected int $timeout = 15;
-    protected bool $verifySsl = true;
+    /**
+     * @var string
+     */
+    protected $baseUrl = '';
 
-    protected string $login;
-    protected string $tranKey;
-    protected array $headers = [];
-    protected array $authAdditional = [];
+    /**
+     * @var int
+     */
+    protected $timeout = 15;
 
-    protected ?Logger $logger = null;
-    protected ?Client $client = null;
+    /**
+     * @var bool
+     */
+    protected $verifySsl = true;
 
-    protected ?Carrier $carrier = null;
+    /**
+     * @var string
+     */
+    protected $login;
+
+    /**
+     * @var string
+     */
+    protected $tranKey;
+
+    /**
+     * @var array
+     */
+    protected $headers = [];
+
+    /**
+     * @var array
+     */
+    protected $authAdditional = [];
+
+    /**
+     * @var Logger|null
+     */
+    protected $logger = null;
+
+    /**
+     * @var Client|null
+     */
+    protected $client = null;
+
+    /**
+     * @var Carrier|null
+     */
+    protected $carrier = null;
 
     public function __construct(array $data)
     {

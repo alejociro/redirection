@@ -6,8 +6,15 @@ use Dnetix\Redirection\Contracts\Entity;
 
 class AmountDetail extends Entity
 {
-    protected string $kind;
-    protected float $amount;
+    /**
+     * @var string
+     */
+    protected $kind;
+
+    /**
+     * @var float
+     */
+    protected $amount;
 
     public function __construct($data = [])
     {

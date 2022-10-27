@@ -10,8 +10,11 @@ class RedirectResponse extends Entity
 {
     use StatusTrait;
 
-    protected string $requestId = '';
-    protected string $processUrl = '';
+    /**
+     * @var string
+     */
+    protected $requestId = '';
+    protected $processUrl = '';
 
     public function __construct($data = [])
     {

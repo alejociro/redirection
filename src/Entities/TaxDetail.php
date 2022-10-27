@@ -6,9 +6,20 @@ use Dnetix\Redirection\Contracts\Entity;
 
 class TaxDetail extends Entity
 {
-    protected string $kind;
-    protected float $amount;
-    protected ?float $base = null;
+    /**
+     * @var string
+     */
+    protected $kind;
+
+    /**
+     * @var float
+     */
+    protected $amount;
+
+    /**
+     * @var float|null
+     */
+    protected $base = null;
 
     public function __construct($data = [])
     {

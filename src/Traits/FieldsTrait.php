@@ -7,9 +7,9 @@ use Dnetix\Redirection\Entities\NameValuePair;
 trait FieldsTrait
 {
     /**
-     * @var NameValuePair[]
+     * @var NameValuePair[]|array
      */
-    protected array $fields = [];
+    protected $fields = [];
 
     /**
      * @return NameValuePair[]

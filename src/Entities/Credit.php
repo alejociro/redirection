@@ -6,14 +6,26 @@ use Dnetix\Redirection\Contracts\Entity;
 
 class Credit extends Entity
 {
-    protected string $code;
-    protected string $type;
-    protected string $groupCode;
+    /**
+     * @var string
+     */
+    protected $code;
+
+    /**
+     * @var string
+     */
+    protected $type;
+
+    /**
+     * @var string
+     */
+    protected $groupCode;
+
     /**
      * When first created from the service.
      * @var int
      */
-    protected int $installment;
+    protected $installment;
 
     public function __construct(array $data = [])
     {

@@ -16,13 +16,35 @@ class Authentication
     public const WSU = 'http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd';
     public const WSSE = 'http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd';
 
-    private string $login;
-    private string $tranKey;
+    /**
+     * @var string|mixed
+     */
+    private $login;
 
-    private array $auth = [];
-    private array $additional = [];
-    private bool $overridden = false;
-    private string $algorithm = 'sha1';
+    /**
+     * @var string|mixed
+     */
+    private $tranKey;
+
+    /**
+     * @var array|mixed
+     */
+    private $auth = [];
+
+    /**
+     * @var array|mixed
+     */
+    private $additional = [];
+
+    /**
+     * @var bool
+     */
+    private $overridden = false;
+
+    /**
+     * @var string|mixed
+     */
+    private $algorithm = 'sha1';
 
     /**
      * @throws PlacetoPayException

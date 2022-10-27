@@ -12,20 +12,75 @@ class RedirectRequest extends Entity
 {
     use FieldsTrait;
 
-    protected string $locale = 'es_CO';
-    protected ?Person $payer = null;
-    protected ?Person $buyer = null;
-    protected ?DispersionPayment $payment = null;
-    protected ?Subscription $subscription = null;
-    protected string $returnUrl;
-    protected string $paymentMethod = '';
-    protected string $cancelUrl = '';
-    protected string $ipAddress;
-    protected string $userAgent;
-    protected string $expiration;
-    protected bool $captureAddress = false;
-    protected bool $skipResult = false;
-    protected bool $noBuyerFill = false;
+    /**
+     * @var string
+     */
+    protected $locale = 'es_CO';
+
+    /**
+     * @var Person|null
+     */
+    protected $payer = null;
+
+    /**
+     * @var Person|null
+     */
+    protected $buyer = null;
+
+    /**
+     * @var DispersionPayment|null
+     */
+    protected $payment = null;
+
+    /**
+     * @var Subscription|null
+     */
+    protected $subscription = null;
+
+    /**
+     * @var string
+     */
+    protected $returnUrl;
+
+    /**
+     * @var string
+     */
+    protected $paymentMethod = '';
+
+    /**
+     * @var string
+     */
+    protected $cancelUrl = '';
+
+    /**
+     * @var string
+     */
+    protected $ipAddress;
+
+    /**
+     * @var string
+     */
+    protected $userAgent;
+
+    /**
+     * @var string|false
+     */
+    protected $expiration;
+
+    /**
+     * @var bool
+     */
+    protected $captureAddress = false;
+
+    /**
+     * @var bool
+     */
+    protected $skipResult = false;
+
+    /**
+     * @var bool
+     */
+    protected $noBuyerFill = false;
 
     public function __construct($data = [])
     {

@@ -11,7 +11,10 @@ use Dnetix\Redirection\Message\ReverseResponse;
 
 abstract class Carrier
 {
-    protected Settings $settings;
+    /**
+     * @var Settings
+     */
+    protected $settings;
 
     public function __construct(Settings $settings)
     {
