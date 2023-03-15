@@ -1,12 +1,12 @@
 {
-  "name": "dnetix/redirection",
+  "name": "alejociro/redirection",
   "description": "Library to connect with PlacetoPay Checkout service",
   "type": "library",
   "license": "MIT",
   "authors": [
     {
-      "name": "Diego Calle",
-      "email": "dnetix@gmail.com"
+      "name": "Alejandro Ciro",
+      "email": "alejandro.castrillonc@udea.edu.co"
     }
   ],
   "require": {

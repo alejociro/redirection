@@ -64,7 +64,6 @@ class Transaction extends Entity
     /**
      * @var bool
      */
-
     protected $refunded = false;
     /**
      * @var NameValuePair[]
