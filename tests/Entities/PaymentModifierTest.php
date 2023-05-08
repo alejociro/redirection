@@ -7,7 +7,10 @@ use Tests\BaseTestCase;
 
 class PaymentModifierTest extends BaseTestCase
 {
-    private array $data;
+    /**
+     * @var array
+     */
+    private $data;
 
     public function testItCanCreateAPaymentModifier(): void
     {
