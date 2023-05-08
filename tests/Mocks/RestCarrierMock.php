@@ -14,12 +14,17 @@ use Psr\Http\Message\RequestInterface;
 
 class RestCarrierMock
 {
-    protected static ?self $_instance = null;
+    /** @var RestCarrierMock|null */
+    protected static $_instance = null;
 
-    protected RequestInterface $request;
+    /** @var RequestInterface */
+    protected $request;
 
-    protected array $parameters = [];
-    protected array $headers = [];
+    /** @var array */
+    protected $parameters = [];
+
+    /** @var array */
+    protected $headers = [];
 
     private function __construct()
     {

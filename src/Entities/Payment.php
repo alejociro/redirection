@@ -69,8 +69,8 @@ class Payment extends Entity
      */
     protected $agreementType = '';
 
-    /** @var PaymentModifier[] */
-    protected array $modifiers = [];
+    /** @var PaymentModifier[]|array */
+    protected $modifiers = [];
 
     public function __construct(array $data = [])
     {
