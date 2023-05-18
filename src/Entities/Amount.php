@@ -58,7 +58,6 @@ class Amount extends AmountBase
                 $detail = new AmountDetail($detail);
             }
 
-            $this->{$detail->kind()} = $detail->amount();
             $return[] = $detail;
         }
         $this->details = $return;
