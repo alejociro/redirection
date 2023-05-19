@@ -7,6 +7,9 @@ jobs:
       fail-fast: false
       matrix:
         php-version:
+          - "7.1"
+          - "7.2"
+          - "7.3"
           - "7.4"
           - "8.0"
           - "8.1"
@@ -19,7 +22,7 @@ jobs:
       - name: Validate composer.json and composer.lock
         run: composer validate
       - name: Install dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest
+        run: composer install --prefer-dist --no-progress
       - name: Check code style
         run: composer run-script php-cs-fixer
       - name: Run test suite
