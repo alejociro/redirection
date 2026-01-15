@@ -21,7 +21,7 @@ class Logger
      */
     protected $logger = null;
 
-    public function __construct(LoggerInterface $logger = null)
+    public function __construct(?LoggerInterface $logger = null)
     {
         $this->logger = $logger;
     }
