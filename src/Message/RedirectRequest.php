@@ -82,6 +82,11 @@ class RedirectRequest extends Entity
      */
     protected $noBuyerFill = false;
 
+    /**
+     * @var array
+     */
+    protected $metadata = [];
+
     public function __construct($data = [])
     {
         // Setting the default values
@@ -103,6 +108,8 @@ class RedirectRequest extends Entity
         if (isset($data['fields'])) {
             $this->setFields($data['fields']);
         }
+
+        $this->metadata = $data['metadata'] ?? [];
     }
 
     public function locale(): string
@@ -232,6 +239,11 @@ class RedirectRequest extends Entity
         return filter_var($this->noBuyerFill, FILTER_VALIDATE_BOOLEAN);
     }
 
+    public function metadata(): array
+    {
+        return $this->metadata;
+    }
+
     public function toArray(): array
     {
         return $this->arrayFilter([
@@ -250,6 +262,7 @@ class RedirectRequest extends Entity
             'captureAddress' => $this->captureAddress(),
             'skipResult' => $this->skipResult(),
             'noBuyerFill' => $this->noBuyerFill(),
+            'metadata' => $this->metadata(),
         ]);
     }
 }
