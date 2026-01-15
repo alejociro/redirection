@@ -26,10 +26,21 @@ class CollectRequest extends RedirectRequest
      */
     protected $userAgent = '';
 
+    /**
+     * @var string
+     */
+    protected $provider = null;
+
     public function __construct(array $data = [])
     {
         parent::__construct($data);
         $this->loadEntity($data['instrument'], 'instrument', Instrument::class);
+        $this->provider = $data['provider'] ?? null;
+    }
+
+    public function provider(): ?string
+    {
+        return $this->provider;
     }
 
     public function instrument(): Instrument
@@ -41,6 +52,7 @@ class CollectRequest extends RedirectRequest
     {
         return array_merge(parent::toArray(), [
             'instrument' => $this->instrument() ? $this->instrument()->toArray() : null,
+            'provider' => $this->provider(),
         ]);
     }
 }

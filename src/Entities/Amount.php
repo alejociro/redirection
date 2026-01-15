@@ -16,6 +16,24 @@ class Amount extends AmountBase
      */
     protected $details = [];
 
+    /**
+     * Details Available:
+     * @var float
+     * @see https://docs.placetopay.dev/checkout/tax-details#amount-details
+     */
+    protected $discount;
+    protected $additional;
+    protected $vatDevolutionBase;
+    protected $shipping;
+    protected $handlingFee;
+    protected $insurance;
+    protected $giftWrap;
+    protected $subtotal;
+    protected $fee;
+    protected $tip;
+    protected $airline;
+    protected $interest;
+
     public function __construct($data = [])
     {
         parent::__construct($data);
