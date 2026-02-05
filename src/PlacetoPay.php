@@ -40,7 +40,7 @@ class PlacetoPay
         return $this->settings->carrier()->request($redirectRequest);
     }
 
-    public function query(int $requestId): RedirectInformation
+    public function query(string $requestId): RedirectInformation
     {
         return $this->settings->carrier()->query($requestId);
     }
